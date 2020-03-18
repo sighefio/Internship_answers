@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        SIGN UP
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .container-fluid {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .form {
+            margin: 0em 0px 0px 0px;
+            padding: 5px 0px 8px 0px;
+            background-color: #0091ea;
+        }
+
+        input {
+            border: none;
+            border-bottom: 2px solid #e0e0e0;
+            color: white;
+        }
+
+        input:focus {
+            outline: none;
+            border-bottom: 2px solid white;
+        }
+
+        input:focus+.inform {
+            outline: none;
+            border-bottom: 2px solid white;
+        }
+
+        ::placeholder {
+            color: #e0e0e0;
+        }
+
+        .inform {
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        label {
+            padding: 0px;
+            margin: 0px;
+            font-size: 0.7em;
+            color: #e0e0e0;
+        }
+
+        .label {
+            min-height: 0.7em;
+            margin: 0px;
+        }
+
+        #signup:hover {
+            background-color: #69f0ae;
+            color: white;
+        }
+
+        #signup:disabled {
+            cursor: unset;
+            background-color: #e0e0e0;
+            color: blue;
+        }
+
+        button.btn {
+            background-color: white;
+            color: blue;
+        }
+
+        i.material-icons {
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body style="background-color:#e0e0e0;">
+    <!-- ---------------------------------------------container------------------------------------------- -->
+    <div class="container">
+        <div class="container-fluid">
+            <div class="row">
+                <!-- ------------------------------------top---------------------------------------- -->
+                <div class="col-xs-12 col-sm-12 col-lg-3"></div>
+                <!-- ------------------------------------endtop---------------------------------------- -->
+                <!-- ------------------------------------middle---------------------------------------- -->
+
+                <div class="col-xs-12 col-sm-12 col-lg-6">
+                    <div class="container-fluid" style="background-color: #0091ea; border-radius:12px;">
+                        <div class="col-12" style="padding: 8px 0px 0px 15px;">
+                            <a href="loginpage.html">
+                                <i class="material-icons" style="font-size:2em;color: white;">
+                                    keyboard_backspace
+                                </i>
+                            </a>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="container-fluid" style="padding: 0px 30px 0px 30px; text-align:center;">
+                                <i class="material-icons" style="font-size: 5em; color:white;">
+                                    person_outline
+                                </i>
+                                <p style="color: white; margin-top:0.8em;">Hey there! You can start by creating</br>a
+                                    new account</p>
+                            </div>
+                            <div class="container-fluid" style="padding: 0px 6.5em 2em 6.5em;">
+                                <form id="form" style="margin:0px; padding:0px; ">
+                                    <div class="container row" style="margin:0px; padding:0px;">
+                                        <div class="container-fluid label">
+                                            <label id="label1"></label>
+                                        </div>
+                                        <input id="username" class="col-10 form" type="text" placeholder="Username"
+                                            data-label="#label1" required>
+                                        <div class="col-2 inform">
+                                            <i class="material-icons" id="icon1">
+                                            </i>
+                                        </div>
+                                        <div id="alert1" class="alert-warning" style="background-color: inherit; font-size:0.8em;">
+                                        </div>
+                                    </div>
+                                    <div class="container row" style="margin:0px; padding:0px;">
+                                        <div class="container-fluid label">
+                                            <label id="label2"></label>
+                                        </div>
+                                        <input id="email" class="col-10 form" type="text" placeholder="Email address"
+                                            data-label="#label2" required>
+                                        <div class="col-2 inform">
+                                            <i class="material-icons" id="icon2">
+                                            </i>
+                                        </div>
+                                        <div id="alert2" class="alert-warning" style="background-color: inherit; font-size:0.8em;">
+                                        </div>
+                                    </div>
+                                    <div class="container row" style="margin:0px; padding:0px;">
+                                        <div class="container-fluid label">
+                                            <label id="label3"></label>
+                                        </div>
+                                        <input id="password" class="col-10 form" type="password" placeholder="Password"
+                                            data-label="#label3" required>
+                                        <div class="col-2 inform">
+                                            <a id="visable" class="btn">
+                                                <i class="material-icons" id="icon3">
+                                                </i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="container row" style="margin:0px; padding:0px;">
+                                        <div class="container-fluid label">
+                                            <label id="label4"></label>
+                                        </div>
+                                        <input id="repeat" class="col-10 form" type="password"
+                                            placeholder="Repeat Password" data-label="#label4" required>
+                                        <div class="col-2 inform">
+                                            <i class="material-icons" id="icon4">
+                                            </i>
+                                        </div>
+                                    </div>
+                                    <div id="alert4" class="alert-warning" style="background-color: inherit; font-size:0.8em;">
+                                    </div>
+                                    <div class="container row" style="margin:2em 0px 1.5em 0px; padding:0px;">
+                                        <button id="signup" class="col-12 btn btn-block" type="text">
+                                            SIGN UP
+                                        </button>
+                                    </div>
+                                </form>
+                                <p style="text-align: center; color:#e0e0e0; margin: 0px 0px 2em 0px;">
+                                    Do you have an account? <a href="loginpage.html" style="color: white;">Login</a>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ---------------------------------------end middle------------------------------------- -->
+                <!-- ------------------------------------bottom---------------------------------------- -->
+                <div class="col-xs-12 col-sm-12 col-lg-3"></div>
+                <!-- ------------------------------------end bottom---------------------------------------- -->
+            </div>
+        </div>
+    </div>
+    <footer style="text-align: center;">copyright @ 2020 lwin maung maung</footer>
+    <!-- ---------------------------------------------end container------------------------------------------- -->
+    <script>
+        const mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const usernameformat = /^[a-zA-Z0-9]+([_]?[a-zA-Z0-9]+)*$/;
+        document.querySelector('#signup').disabled = true;
+        document.addEventListener("DOMContentLoaded", () => {
+            document.querySelectorAll("input").forEach(inpu => {
+                let placeholdervalue = inpu.placeholder;
+                inpu.onfocus = function () {
+                    this.placeholder = "";
+                    document.querySelector(this.dataset.label).innerHTML = placeholdervalue;
+                    yesorno();
+                };
+                inpu.onblur = function () {
+                    this.placeholder = placeholdervalue;
+                    if (this.value.length > 0) {
+
+                    } else {
+                        document.querySelector(this.dataset.label).innerHTML = '';
+                    }
+                    yesorno();
+                };
+                yesorno();
+            });
+            document.querySelector('#username').onkeyup = ()=>{
+                document.querySelector('#alert1').innerHTML = "";
+                document.querySelector('#icon1').innerHTML = "";
+                yesorno();
+            };
+            document.querySelector('#email').onkeyup = ()=>{
+                document.querySelector('#alert2').innerHTML = "";
+                document.querySelector('#icon2').innerHTML = "";
+                yesorno();
+            };
+            document.querySelector('#repeat').onkeyup = function () {
+                document.querySelector('#alert4').innerHTML = "";
+                if (this.value.length > 0) {
+                    if (document.querySelector('#password').value == this.value) {
+                        document.querySelector('#icon4').innerHTML = "done_outline";
+                    } else {
+                        document.querySelector('#icon4').innerHTML = "error";
+                    }
+                } else {
+                    document.querySelector('#icon4').innerHTML = "";
+                }
+                yesorno();
+            };
+            document.querySelector('#password').onkeyup = function () {
+                document.querySelector('#alert4').innerHTML = "";
+                if (this.value.length > 0) {
+                    document.querySelector('#icon3').innerHTML = "visibility";
+                } else {
+                    document.querySelector('#icon3').innerHTML = "";
+                }
+                yesorno();
+            };
+            document.querySelector('#visable').onclick = () => {
+                if (document.querySelector('#icon3').innerHTML == "visibility") {
+                    document.querySelector('#password').type = "text";
+                    document.querySelector('#repeat').type = "text";
+                    document.querySelector('#icon3').innerHTML = "visibility_off";
+                } else if (document.querySelector('#icon3').innerHTML == "visibility_off") {
+                    document.querySelector('#password').type = "password";
+                    document.querySelector('#repeat').type = "password";
+                    document.querySelector('#icon3').innerHTML = "visibility";
+                } else {
+
+                }
+                return false;
+            };
+            document.querySelector('#form').onsubmit = () => {
+                if (document.querySelector('#password').value == document.querySelector('#repeat').value && document.querySelector("#email").value.match(mailformat) && document.querySelector('#username').value.match(usernameformat)) {
+                    document.write(`<body style="text-align:center;"><h1> Your account is successfully created!</br><span style="font-size:0.7em;">please go back to <a href="loginpage.html" style="font-size:1.5em;">Login page</a></span></h1><h2>thank you <span style="color:green;font-size:3em;">${document.querySelector('#username').value}</span> :-)</h2></body>`)
+                    return false;
+                }
+                else{
+
+                    if(!document.querySelector("#email").value.match(mailformat)){
+                        document.querySelector('#alert4').innerHTML = "";
+                        document.querySelector('#alert2').innerHTML = "Valid email address is required!";
+                        document.querySelector('#icon2').innerHTML = "error";
+                        if (document.querySelector('#password').value != document.querySelector('#repeat').value){
+                            document.querySelector('#alert4').innerHTML = "Password does not match!";
+                            if(document.querySelector('#username').value.match(usernameformat)){
+                                return false;
+                            }
+                            else{
+                                document.querySelector('#alert1').innerHTML = "Only english alphabet, numbers and underscore are allowed but it can't start and end with underscore!";
+                                document.querySelector('#icon1').innerHTML = "error";
+                                return false;
+                            }
+                        }else{
+                            if(document.querySelector('#username').value.match(usernameformat)){
+                                return false;
+                            }
+                            else{
+                                document.querySelector('#alert1').innerHTML = "Only english alphabet, numbers and underscore are allowed but it can't start and end with underscore!";
+                                document.querySelector('#icon1').innerHTML = "error";
+                                return false;
+                            }
+                        }
+                        return false;
+                    }
+                    else{
+                        document.querySelector('#alert2').innerHTML = "";
+                        if (document.querySelector('#password').value != document.querySelector('#repeat').value){
+                            document.querySelector('#alert4').innerHTML = "Password does not match!";
+                            if(document.querySelector('#username').value.match(usernameformat)){
+                                return false;
+                            }
+                            else{
+                                document.querySelector('#alert1').innerHTML = "Only english alphabet, numbers and underscore are allowed but it can't start and end with underscore!";
+                                document.querySelector('#icon1').innerHTML = "error";
+                                return false;
+                            }
+                        }else{
+                            if(document.querySelector('#username').value.match(usernameformat)){
+                                return false;
+                            }
+                            else{
+                                document.querySelector('#alert1').innerHTML = "Only english alphabet, numbers and underscore are allowed but it can't start and end with underscore!";
+                                document.querySelector('#icon1').innerHTML = "error";
+                                return false;
+                            }
+                        }
+                        return false;
+                    }
+                }
+            };
+
+        });
+        function yesorno() {
+            if (document.querySelector('#username').value.length > 0 && document.querySelector('#email').value.length > 0 && document.querySelector('#password').value.length > 0 && document.querySelector('#repeat').value.length > 0) {
+                document.querySelector('#signup').disabled = false;
+            } else {
+                document.querySelector('#signup').disabled = true;
+            }
+            return false;
+        };
+    </script>
+</body>
+
+</html>

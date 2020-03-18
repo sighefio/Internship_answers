@@ -1,0 +1,187 @@
+<html>
+
+<head>
+    <title>
+        Calculator
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        h1 {
+            text-align: center;
+            color: #80d8ff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Calculator</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5" style="background-color: #eeeeee; margin: 10px auto;">
+                <h3>First Calculator</h3>
+                <form id="nform">
+                    <div class="container">
+
+                        <div class="row">
+                            <div id="result"
+                                style="background-color:white; text-align:right; padding:8px; margin: 10px auto;"
+                                class="btn col-md-12">0</div>
+
+                            <input class="col-md-5 col-sm-12" placeholder="Enter your first Num"
+                                style="margin:auto; padding:8px; text-align:right;" type="text" id="value1">
+
+                            <div class="col-md-2 col-sm-12"></div>
+
+                            <input class="col-md-5 col-sm-12" placeholder="Enter your second Num"
+                                style="margin:auto; padding:8px; text-align:right;" type="text" id="value2">
+
+                        </div>
+                    </div>
+                </form>
+                <div class="row" style="margin: 10px auto;">
+                <!-- <div class="col-12" style="margin: 10px auto;"> -->
+                    <button class="btn btn-light btn-block col-2" style="margin: 2px;" id="add">+</button>
+                    <button class="btn btn-light btn-block col-2" style="margin: 2px;" id="sub">-</button>
+                    <button class="btn btn-light btn-block col-2" style="margin: 2px;" id="mul">*</button>
+                    <button class="btn btn-light btn-block col-2" style="margin: 2px;" id="div">/</button>
+                    <button class="btn btn-danger btn-block col-3" style="margin: 2px;" id="clear1">clear</button>
+                <!-- </div> -->
+            </div>
+
+            </div>
+
+            <div class="col-md-2 col-sm-12"></div>
+
+            <div class="col-md-5 col-sm-12" style="background-color: #eeeeee;">
+
+                <h3>Second Calculator</h3>
+                <div class="row" style="padding: 10px;">
+                    <div id="globalvalue" class="col-md-12 btn"
+                        style="margin: 10px auto; padding: 10px; text-align:right; background-color:white;">
+                        0
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="col-lg-5 col-sm-12">
+                            <table>
+                                <tr>
+                                    <td><a href="" class="btn btn-danger btn-block" id="clear">C</a></td>
+                                    <td><a href="" class="btn btn-info btn-block val" data-vlue="+">+</a></td>
+                                    <td><a href="" class="btn btn-info btn-block val" data-vlue="-">-</a></td>
+                                    <td><a href="" class="btn btn-success val" id="equal">=</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="" class="btn btn-primary btn-block val" data-vlue="1">1</a></td>
+                                    <td><a href="" class="btn btn-primary btn-block val" data-vlue="2">2</a></td>
+                                    <td><a href="" class="btn btn-primary btn-block val" data-vlue="3">3</a></td>
+                                    <td><a href="" class="btn btn-info btn-block val" data-vlue="*">*</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="" class="btn btn-primary btn-block val" data-vlue="4">4</a></td>
+                                    <td><a href="" class="btn btn-primary btn-block val" data-vlue="5">5</a></td>
+                                    <td><a href="" class="btn btn-primary btn-block val" data-vlue="6">6</a></td>
+                                    <td><a href="" class="btn btn-info btn-block val" data-vlue="/">/</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="" class="btn btn-primary btn-block val" data-vlue="7">7</a></td>
+                                    <td><a href="" class="btn btn-primary btn-block val" data-vlue="8">8</a></td>
+                                    <td><a href="" class="btn btn-primary btn-block val" data-vlue="9">9</a></td>
+                                    <td><a href="" class="btn btn-primary btn-block val" data-vlue="0">0</a></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="col-lg-2 col-sm-12"></div>
+                        <div class="col-lg-5 col-sm-12" style="background-color: #f0f4c3; overflow-y:scroll;">
+                                history
+                                <ul style="list-style: none;">
+
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+        <footer style="color: #9e9e9e; text-align:center;">copyright@ 2020 lwin maung maung</footer>
+        <script>
+            var globalvalue = "";
+
+            document.addEventListener('DOMContentLoaded', () => {
+                //----------------------------------first calculator---------------------------------------------
+                document.querySelector('#add').onclick = () => {
+                    let first = Number(document.querySelector("#value1").value);
+                    let second = Number(document.querySelector("#value2").value);
+                    document.querySelector("#result").innerHTML = add(first, second);
+                    first.value = "";
+                    second.value = "";
+                    return false;
+                };
+                document.querySelector("#sub").onclick = () => {
+                    let first = Number(document.querySelector("#value1").value);
+                    let second = Number(document.querySelector("#value2").value);
+                    document.querySelector("#result").innerHTML = sub(first, second);
+                    return false;
+                };
+                document.querySelector("#mul").onclick = () => {
+                    let first = Number(document.querySelector("#value1").value);
+                    let second = Number(document.querySelector("#value2").value);
+                    document.querySelector("#result").innerHTML = mul(first, second);
+                    return false;
+                };
+                document.querySelector("#div").onclick = () => {
+                    let first = Number(document.querySelector("#value1").value);
+                    let second = Number(document.querySelector("#value2").value);
+                    document.querySelector("#result").innerHTML = div(first, second);
+                    return false;
+                };
+                document.querySelector('#clear1').onclick =()=>{
+                    clearr();
+                    return false;
+                };
+                //---------------------------------end first calculator----------------------------------------------
+                //-------------------------------------second calculator---------------------------------------------
+                document.querySelectorAll('.val').forEach(btn => {
+                    btn.onclick = () => {
+                        globalvalue += btn.dataset.vlue;
+                        document.querySelector('#globalvalue').innerHTML = globalvalue;
+                        return false;
+                    };
+                });
+                document.querySelector('#clear').onclick = () => {
+                    globalvalue = "";
+                    document.querySelector('#globalvalue').innerHTML = 0;
+                    return false;
+                };
+                document.querySelector('#equal').onclick = () => {
+                    globalvalue = document.querySelector('#globalvalue').innerHTML;
+                    globalvalue = eval(globalvalue);
+                    document.querySelector('#globalvalue').innerHTML = globalvalue;
+                    const Li = document.createElement('li');
+                    Li.innerHTML = globalvalue;
+                    document.querySelector('ul').append(Li);
+                    return false;
+                };
+                //---------------------------------end second calculator---------------------------------------------
+            });
+
+            function add(first, second) {
+                return first + second;
+            };
+            function sub(first, second) {
+                return first - second;
+            };
+            function mul(first, second) {
+                return first * second;
+            };
+            function div(first, second) {
+                return first / second;
+            };
+            function clearr(){
+                document.querySelector("#result").innerHTML = 0;
+                document.querySelector("#value1").value = "";
+                document.querySelector("#value2").value = "";
+            };
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        LOGIN
+    </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<style>
+    body{
+        font-family: Helvetica,sans-serif,Arial;
+    }
+    form .container-fluid {
+        margin: 0px;
+        padding: 0px;
+    }
+    #inputblock1 , #inputblock2 , #buttonblock{
+        padding: 0px 40px 0px 40px;
+        margin: 0px;
+    }
+    #input1 , #input2 , #button{
+        color: black;
+        font-size: 20px;
+    padding: 10px 0px 10px 0px;
+    margin: 0px;
+    border: none;
+    border-bottom: 1px solid aqua;
+    }
+    #icon1 , #icon2{
+        border-bottom: 1px solid aqua;
+        padding: 0px;
+        margin:0px; 
+        text-align:center;
+    }
+    #input1:focus , #input2:focus{
+        outline-color: white;
+        border-bottom: 3px solid aqua;
+    }
+    #input1:focus + #icon1 , #input2:focus + #icon2{
+        border-bottom: 3px solid aqua;
+    }
+    ::placeholder { 
+        color:aqua;
+        opacity: 1;
+      }
+</style>
+</head>
+
+<body style="background-color: #e0e0e0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3"></div>
+            <div class="col-lg-6">
+                <div class="container-fluid"
+                    style="background-color: white; padding:15px; padding-top:8px; border-radius:25px;">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-12"><a href="signup.html">
+                                    <i class="material-icons">
+                                        keyboard_backspace
+                                    </i></a>
+                            </div>
+                            <div class="col-12" style="text-align: center;padding-top:15px;">
+                                <i class="material-icons" style="font-size: 6em;">
+                                    fingerprint
+                                </i>
+                            </div>
+                            <div class="col-12">
+                                <p style="text-align:center;">Enter your login credentials</br>to get access:</p>
+                            </div>
+                            <div class="col-12" style="padding: 30px; margin:0px;">
+                                <div id="inputblock1" class="container-fluid row" style="background-color: white;">
+                                    
+                                    <input id="input1" class="container-fluid col-10" type="text" placeholder="Username">
+                                
+                                    <div id="icon1" class="col-2">
+                                <i class="material-icons" style="font-size: 3em; color:aqua;" >
+                                        perm_identity
+                                    </i>
+                                </div>
+                                </div>
+                            <!-- Second input -->
+                                <div id="inputblock2" class="container-fluid row" style="background-color: white;">
+                                    
+                                    <input id="input2" class="container-fluid col-10" type="password" placeholder="Password">
+                                
+                                    <div id="icon2" class="col-2" style="padding:3px 0px 0px 0px;">
+                                <i class="material-icons" style="font-size: 2.5em; color:aqua;" >
+                                        vpn_key
+                                    </i>
+                                </div>
+                                </div>
+                                <p style="text-align: center; margin:2em;"><a href="#">Forgot password?</a></p>
+                                <!-- for login button -->
+                                <div id="buttonblock" class="container-fluid row" style="background-color: white;">
+                                    
+                                    <button id="button" class="container-fluid col-12 btn btn-block btn-primary" style="border-bottom: 0px solid aqua; color:white;">LOGIN</button>
+                                
+                                </div>
+
+                                <p style="text-align: center; margin:2em;">Don't have an account? <a href="signup.html">Sign up</a></p>
+
+
+                            </div>
+
+
+
+                            <!-- <div class="col-12" style="padding: 20px;">
+                                <div class="container" >
+                                        <div class="row" style="border:none; border-bottom:1px solid black;>
+                                            <div class="col-xs-12">
+                                                <input type="text" placeholder="Username" style="border: none; padding:10px;">
+                                            </div>
+                                            <div class="col-xs-2">
+                                                <i class="material-icons" style="border: 1px solid black;">
+                                                    perm_identity
+                                                </i>
+                                            </div>
+                                        </div>
+                                </div> -->
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+            <div class="col-lg-3"></div>
+        </div>
+    </div>
+
+    <footer style="text-align: center;">Copyright @ 2020 lwin maung maung</footer>
+    <script>
+        addEventListener('DOMContentLoaded',()=>{
+            document.querySelector("#button").onclick = ()=>{
+                return false;
+            };
+        });
+    </script>
+</body>
+
+</html>
